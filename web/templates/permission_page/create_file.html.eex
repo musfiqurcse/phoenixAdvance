@@ -58,7 +58,7 @@ $(document).ready(function(){
       .html('')
         .html(mainContent+'<div class="permissionItem" data-index="'+dataIndex +'">'+item+'</div>')
 
-    //console.log(item.html())
+    console.log(item.html())
   });
 });
 
