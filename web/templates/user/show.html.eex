@@ -1,0 +1,6 @@
+<h1>
+  User Details
+</h1>
+<label for="name" class="control-label">Name: </label> <label for="" class="control-label"><%= Map.get(@user,"name") %></label><br>
+<label for="name" class="control-label">Id: </label> <label for="" class="control-label"><%= Map.get(@user, "id") %></label><br>
+<label for="name" class="control-label">Details: </label> <label for="" class="control-label"><%= Map.get(@user, "details") %></label>

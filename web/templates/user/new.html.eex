@@ -1,0 +1,29 @@
+<div class="panel panel-body">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <strong> User Strong</strong>
+    </div>
+  </div>
+  <div class="panel-body">
+    <%= form_for @changeset, user_path(@conn, :create),fn f-> %>
+    <div class="form-group">
+      <%= text_input f, :name, placeholder: "Name", class: "form-control" %> 
+    </div>
+    <div class="form-group">
+      <%= text_input f, :username, placeholder: "Username", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= textarea f, :details, placeholder: "Give Some Details", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= text_input f, :age, placeholder: "Age", class: "form-control" %>
+    </div>
+    <div class="form-group">
+
+      <%= password_input f, :password, placeholder: "Put your password", class: "form-control" %>
+    </div>
+    <%= submit "Create a New User", class: "btn btn-default"%>
+    <% end %>
+  </div>
+</div>

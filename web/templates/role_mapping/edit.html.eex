@@ -1,0 +1,6 @@
+<h2>Edit role mapping</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: role_mapping_path(@conn, :update, @role_mapping) %>
+
+<%= link "Back", to: role_mapping_path(@conn, :index) %>

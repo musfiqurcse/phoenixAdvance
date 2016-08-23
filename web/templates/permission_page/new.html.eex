@@ -1,0 +1,11 @@
+<h2>New permission page</h2>
+
+ <%= render "form.html", changeset: @changeset, action: permission_page_path(@conn, :create) %>
+
+      <!-- <div class="form-group">
+        <label for=""  class="control-label"></label>
+        <%= #select f, :roleId, @items , class: "form-control"  %>
+      </div> -->
+
+
+<%= link "Back", to: permission_page_path(@conn, :index) %>

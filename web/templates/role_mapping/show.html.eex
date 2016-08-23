@@ -1,0 +1,18 @@
+<h2>Show role mapping</h2>
+
+<ul>
+
+  <li>
+    <strong>User:</strong>
+    <%= @role_mapping.user_id %>
+  </li>
+
+  <li>
+    <strong>Role:</strong>
+    <%= @role_mapping.role_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: role_mapping_path(@conn, :edit, @role_mapping) %>
+<%= link "Back", to: role_mapping_path(@conn, :index) %>

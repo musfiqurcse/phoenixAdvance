@@ -1,0 +1,28 @@
+<h2>Show permission page</h2>
+
+<ul>
+
+  <li>
+    <strong>Role:</strong>
+    <%= @permission_page.role_id %>
+  </li>
+
+  <li>
+    <strong>Controllername:</strong>
+    <%= @permission_page.controllerName %>
+  </li>
+
+  <li>
+    <strong>Actionname:</strong>
+    <%= @permission_page.actionName %>
+  </li>
+
+  <li>
+    <strong>Permission:</strong>
+    <%= @permission_page.permission %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: permission_page_path(@conn, :edit, @permission_page) %>
+<%= link "Back", to: permission_page_path(@conn, :index) %>

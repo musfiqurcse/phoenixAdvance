@@ -1,0 +1,32 @@
+<h2>Listing permissionpages</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Controllername</th>
+      <th>Actionname</th>
+      <th>Permission</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for permission_page <- @permissionpages do %>
+    <tr>
+      <td><%= permission_page.role_id %></td>
+      <td><%= permission_page.controllerName %></td>
+      <td><%= permission_page.actionName %></td>
+      <td><%= permission_page.permission %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: permission_page_path(@conn, :show, permission_page), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: permission_page_path(@conn, :edit, permission_page), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: permission_page_path(@conn, :delete, permission_page), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New permission page", to: permission_page_path(@conn, :new) %>

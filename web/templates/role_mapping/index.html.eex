@@ -1,0 +1,28 @@
+<h2>Listing rolemappings</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Role</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for role_mapping <- @rolemappings do %>
+    <tr>
+      <td><%= role_mapping.user_id %></td>
+      <td><%= role_mapping.role_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: role_mapping_path(@conn, :show, role_mapping), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: role_mapping_path(@conn, :edit, role_mapping), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: role_mapping_path(@conn, :delete, role_mapping), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New role mapping", to: role_mapping_path(@conn, :new) %>
